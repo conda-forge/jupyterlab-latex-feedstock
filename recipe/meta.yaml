@@ -16,7 +16,9 @@ build:
 requirements:
   build:
   host:
+    - python >=3.6
   run:
+    - python >=3.6
     - jupyterlab_latex
 
 test:
