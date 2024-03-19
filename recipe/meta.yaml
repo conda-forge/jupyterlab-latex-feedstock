@@ -1,25 +1,29 @@
 {% set name = "jupyterlab-latex" %}
-{% set version = "3.1.0" %}
+{% set version = "4.0.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/j/jupyterlab_latex/jupyterlab_latex-{{ version }}.tar.gz
-  sha256: f44df285405b5b552b70d10f1f0573d61ca3a4d2ca50bd3097a63a27cdcde16e
+  git_url: https://github.com/jupyterlab/jupyterlab-latex.git
+  git_rev: v{{ version }}
 
 build:
   noarch: python
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
 requirements:
-  build:
   host:
-    - python >=3.6
+    - python >=3.8
+    - jupyter_packaging >=0.12,<1.dev0,<2
+    - jupyterlab ==4.0.0
+    - pip
   run:
-    - python >=3.6
-    - jupyterlab_latex
+    - python >=3.8
+    - jupyterlab >=4,<5
+    - jupyter_server >=2,<3
 
 test:
   imports:
