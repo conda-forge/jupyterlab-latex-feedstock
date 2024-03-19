@@ -6,8 +6,8 @@ package:
   version: {{ version }}
 
 source:
-  git_url: https://github.com/jupyterlab/jupyterlab-latex.git
-  git_rev: v{{ version }}
+  url: https://github.com/jupyterlab/jupyterlab-latex/archive/v{{ version }}.tar.gz
+  sha256: 46da59dc8848bfc6cab4ef8c2d6dcadaa13c3143384017b05097d8d8e70adec4
 
 build:
   noarch: python
