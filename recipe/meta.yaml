@@ -19,6 +19,7 @@ requirements:
     - python >=3.8
     - jupyter_packaging >=0.12,<1.dev0,<2
     - jupyterlab ==4.0.0
+    - nodejs =18
     - pip
   run:
     - python >=3.8
