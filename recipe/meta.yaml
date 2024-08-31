@@ -1,5 +1,5 @@
 {% set name = "jupyterlab-latex" %}
-{% set version = "4.0.0" %}
+{% set version = "4.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/jupyterlab/jupyterlab-latex/archive/v{{ version }}.tar.gz
-  sha256: 46da59dc8848bfc6cab4ef8c2d6dcadaa13c3143384017b05097d8d8e70adec4
+  sha256: ef437506f6dc4c6139fa60a9219639fced8c0b975e5fdc77c0cb7fe04158933b
 
 build:
   noarch: python
@@ -21,6 +21,9 @@ requirements:
     - jupyterlab ==4.0.0
     - nodejs =18
     - pip
+    - hatchling
+    - hatch-nodejs-version
+    - hatch-jupyter-builder
   run:
     - python >=3.8
     - jupyterlab >=4,<5
