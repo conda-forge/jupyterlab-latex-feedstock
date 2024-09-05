@@ -1,5 +1,5 @@
 {% set name = "jupyterlab-latex" %}
-{% set version = "4.1.0" %}
+{% set version = "4.1.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/jupyterlab/jupyterlab-latex/archive/v{{ version }}.tar.gz
-  sha256: ef437506f6dc4c6139fa60a9219639fced8c0b975e5fdc77c0cb7fe04158933b
+  sha256: bec1f2bfd1086979285e9e369a9b0510e12f03a106e2bf1b570852ceea48a1f8
 
 build:
   noarch: python
